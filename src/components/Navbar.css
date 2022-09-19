@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 170px;
+    height: 90px;
+    margin-left: 10px;
+}
+
+.links ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.links ul li{
+    padding: 10px 20px;
+    margin: 0 25px;
+    border: 2px solid rgb(255,152,0);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.links ul li:hover{
+    border-color: rgb(3,169,244);
+}

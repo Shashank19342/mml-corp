@@ -3,12 +3,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
+  color: rgb(122, 122, 122);
 }
 
 .bg-full{
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
+  z-index: -1;
 }
 
 .bg-full svg{

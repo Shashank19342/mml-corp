@@ -2,13 +2,29 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import VisionMission from "./components/VisionMission";
+import Products from "./components/Products";
+import Footer from "./components/Footer";
 
 function App() {
+
+
+  window.onscroll = function(ev) {
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 300) {
+      document.querySelector('.bg-svg1').style.bottom = 270 + "px";
+      document.querySelector('.bg-svg2').style.bottom = 230 + "px";
+    }
+    if ((window.innerHeight + window.pageYOffset) <= document.body.offsetHeight - 300) {
+      document.querySelector('.bg-svg1').style.bottom = 140 + "px";
+      document.querySelector('.bg-svg2').style.bottom = 140 + "px";
+    }
+  };
+
   return (
     <div className="app">
       <Navbar />
+      <div className="fadeEffect"></div>
       <div className="bg-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg xmlns="http://www.w3.org/2000/svg" className="bg-svg1" viewBox="0 0 1440 320">
           <path
             fill="#ffa812"
             fillOpacity="1"
@@ -17,7 +33,7 @@ function App() {
         </svg>
       </div>
       <div className="bg-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg xmlns="http://www.w3.org/2000/svg" className="bg-svg2" viewBox="0 0 1440 320">
           <path
             fill="#2db1fd"
             fillOpacity="1"
@@ -25,8 +41,11 @@ function App() {
           ></path>
         </svg>
       </div>
+      <div className="bottom-bg"></div>
       <HeroSection />
       <VisionMission />
+      <Products />
+      <Footer />
     </div>
   );
 }

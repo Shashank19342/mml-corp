@@ -2,8 +2,8 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-top: 150px;
-    padding-bottom: 50px;
+    padding-top: 250px;
+    padding-bottom: 100px;
 }
 
 .hero-text{
@@ -19,9 +19,5 @@
 
 .hero-vid video{
     margin: 0;
-    border-radius: 10px;
-}
-
-.hero-vid video source{
     border-radius: 10px;
 }

@@ -4,16 +4,16 @@ import HeroSection from "./components/HeroSection";
 import VisionMission from "./components/VisionMission";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
+import AboutUsAndForm from "./components/AboutUsAndForm";
 
 function App() {
-
-
+  
   window.onscroll = function(ev) {
-    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 300) {
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 100) {
       document.querySelector('.bg-svg1').style.bottom = 270 + "px";
       document.querySelector('.bg-svg2').style.bottom = 230 + "px";
     }
-    if ((window.innerHeight + window.pageYOffset) <= document.body.offsetHeight - 300) {
+    if ((window.innerHeight + window.pageYOffset) <= document.body.offsetHeight - 100) {
       document.querySelector('.bg-svg1').style.bottom = 140 + "px";
       document.querySelector('.bg-svg2').style.bottom = 140 + "px";
     }
@@ -45,6 +45,9 @@ function App() {
       <HeroSection />
       <VisionMission />
       <Products />
+      <div className="aboutUsNForm">
+        <AboutUsAndForm />
+      </div>
       <Footer />
     </div>
   );

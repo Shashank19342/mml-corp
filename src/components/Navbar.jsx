@@ -1,7 +1,15 @@
-import logo from "../assets/logo-with-name.jpeg";
 import "./Navbar.css";
+import logo from "../assets/logo-with-name.jpeg";
 
 function Navbar(){
+
+    function handleProductSroll() {
+        document.getElementById('products').scrollIntoView();
+    }
+
+    function ContactUsScroll() {
+        document.getElementById('contact-form').scrollIntoView();
+    }
 
     return(
         <div className="navbar">
@@ -10,9 +18,8 @@ function Navbar(){
             </div>
             <div className="links">
                 <ul>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Specialities</li>
+                    <li onClick={handleProductSroll}>Products</li>
+                    <li onClick={ContactUsScroll}>Contact Us</li>
                 </ul>
             </div>
         </div>

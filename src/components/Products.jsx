@@ -11,7 +11,7 @@ import ductTape from "../assets/duct-tape.png";
 
 function Products() {
   return (
-    <div className="products">
+    <div className="products" id="products">
       <h1>Products</h1>
       <div className="cards">
         <div className="card">

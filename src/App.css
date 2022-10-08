@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
   color: rgb(122, 122, 122);
+  scroll-behavior: smooth;
 }
 
 .bg-full{

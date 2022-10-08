@@ -21,7 +21,7 @@ export default function AboutUsAndForm() {
   }
 
   return (
-    <div className="aboutusAndForm">
+    <div className="aboutusAndForm" id="contact-form">
       <div className="aboutus">
         <h2>About Us</h2>
         <p>

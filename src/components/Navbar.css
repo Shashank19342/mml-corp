@@ -37,4 +37,9 @@
     .links ul li{
         margin: 0 10px;
     }
+    .logo img{
+        width: 75px;
+        height: 70px;
+        margin: 10px;
+    }
 }

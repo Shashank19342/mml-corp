@@ -10,7 +10,6 @@ export default function AboutUsAndForm() {
 
   const form = useRef();
   const handleSubmit = (e)=>{
-    console.log(form.current)
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
     .then((result) => {

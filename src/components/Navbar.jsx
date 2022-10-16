@@ -1,5 +1,7 @@
 import "./Navbar.css";
-import logo from "../assets/logo-with-name.jpeg";
+import logo_with_name from "../assets/logo-with-name.jpeg";
+import logo_without_name from "../assets/logo-without-name.jpeg";
+import { useState } from "react";
 
 function Navbar(){
 
@@ -14,7 +16,7 @@ function Navbar(){
     return(
         <div className="navbar">
             <div className="logo">
-                <img src={logo} alt="MML Corporation"></img>
+                <img src={window.innerWidth <= 600? logo_without_name:logo_with_name} alt="MML Corporation"></img>
             </div>
             <div className="links">
                 <ul>

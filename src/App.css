@@ -14,9 +14,10 @@
   z-index: -1;
 }
 
-.bg-svg1, .bg-svg2{
+.bg-svg{
   position: absolute;
-  bottom: 140px;
+  bottom: -100px;
+  width: 100vw;
   transition: all 1s ease;
 }
 
@@ -42,4 +43,3 @@
   width: fit-content;
   margin: 0 auto;
 }
-

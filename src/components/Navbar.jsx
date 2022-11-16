@@ -1,7 +1,8 @@
 import "./Navbar.css";
-import logo_with_name from "../assets/logo-with-name.jpeg";
-import logo_without_name from "../assets/logo-without-name.jpeg";
-import { useState } from "react";
+import logo_with_name from "../assets/logo-with-name.png";
+import logo_without_name from "../assets/logo-without-name.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faArrowRight, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar(){
 
@@ -13,17 +14,47 @@ function Navbar(){
         document.getElementById('contact-form').scrollIntoView();
     }
 
+    const openSidebar = ()=>{
+        document.getElementById('sidebar').style.left = "0%";
+        document.getElementById('overlay').style.display = "block";
+    }
+    const closeSidebar = ()=>{
+        document.getElementById('sidebar').style.left = "-100%";
+        document.getElementById('overlay').style.display = "none";
+    }
+
     return(
-        <div className="navbar">
-            <div className="logo">
-                <img src={window.innerWidth <= 600? logo_without_name:logo_with_name} alt="MML Corporation"></img>
+        <div className="nav">
+            <div className="navbar">
+                <div className="logo">
+                    <img src={window.innerWidth <= 600? logo_without_name:logo_with_name} alt="MML Corporation"></img>
+                </div>
+                <div className="links">
+                    <ul>
+                        <li onClick={handleProductSroll}>Products</li>
+                        <li onClick={ContactUsScroll}>Contact Us</li>
+                    </ul>
+                </div>
+                <div className="nav-btn">
+                    <button>Explore <FontAwesomeIcon icon={faArrowRight} size="lg" className="arrow-icon" /></button>
+                </div>
+                <div className="hambar" onClick={openSidebar}>
+                    <FontAwesomeIcon icon={faBars} size="lg" />
+                </div>
             </div>
-            <div className="links">
-                <ul>
-                    <li onClick={handleProductSroll}>Products</li>
-                    <li onClick={ContactUsScroll}>Contact Us</li>
-                </ul>
+            <div className="sidebar" id="sidebar">
+                <div className="closebar" onClick={closeSidebar}>
+                    <FontAwesomeIcon icon={faXmark} size="xl" />
+                </div>
+                <div className="sidebar-content">
+                    <ul>
+                        <li onClick={handleProductSroll}>Products</li>
+                        <li onClick={ContactUsScroll}>Contact Us</li>
+                    </ul>
+                    <button>Explore <FontAwesomeIcon icon={faArrowRight} size="lg" className="arrow-icon" /></button>
+                </div>
             </div>
+            <div className="bg-overlay" id="overlay" onClick={closeSidebar}></div>
         </div>
     )
 }

@@ -2,6 +2,7 @@
     width: 100%;
     position: fixed;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .navbar{
@@ -67,7 +68,7 @@
 
 .sidebar{
     position: fixed;
-    background-color: #f0ddbb;;
+    background-color: #f0ddbb;
     width: 300px;
     height: 100%;
     top: 0;
@@ -116,7 +117,7 @@
 }
 
 .sidebar-content ul li:hover{
-    background-color: #e7cfa4;;
+    background-color: #e7cfa4;
 }
 
 .sidebar-content button{

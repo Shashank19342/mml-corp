@@ -26,6 +26,7 @@ function HeroSection(){
         <div className="hero">
             <div className="hero-text">
                 <p>MANUFACTURER <span style={{fontSize: fontSize1 + "px",fontWeight: 600}}>EXPORTER &#38;</span> <span style={{fontSize: fontSize2 + "px", fontWeight: 300}}>SUPPLIER</span></p>
+                <p>...of  Bopp Tapes, Printed Tapes, Colour Tapes, Brown Tapes, Masking Tapes, Tissue Tapes, Foam Tapes, Surface Protection Tapes and all other kindes of tapes.</p>
             </div>
             <div className="hero-vid">
                 <video loop autoPlay muted width="400" height="400">

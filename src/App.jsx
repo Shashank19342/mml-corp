@@ -10,15 +10,6 @@ import svg1 from "./assets/blob.svg";
 import svg2 from "./assets/blob1.svg";
 
 function App() {
-  
-  // window.onscroll = function() {
-  //   if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 100) {
-  //     document.querySelector('.bg-svg').style.bottom = 0 + "px";
-  //   }
-  //   if ((window.innerHeight + window.pageYOffset) <= document.body.offsetHeight - 100) {
-  //     document.querySelector('.bg-svg').style.bottom = -100 + "px";
-  //   }
-  // };
 
   return (
     <div className="app">

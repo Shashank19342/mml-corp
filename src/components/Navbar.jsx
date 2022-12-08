@@ -23,8 +23,19 @@ function Navbar(){
         document.getElementById('overlay').style.display = "none";
     }
 
+    window.addEventListener('scroll',()=>{
+        var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+        if(scrollTop>200){
+            document.getElementById('navbar').style.backgroundColor = "#fff3dd";
+            document.getElementById('navbar').style.boxShadow = "2px 2px 6px #dbd4c5";
+        }else{
+            document.getElementById('navbar').style.backgroundColor = "rgba(0,0,0,0)";
+            document.getElementById('navbar').style.boxShadow = "none";
+        }
+    })
+
     return(
-        <div className="nav">
+        <div className="nav" id="navbar">
             <div className="navbar">
                 <div className="logo">
                     <img src={window.innerWidth <= 600? logo_without_name:logo_with_name} alt="MML Corporation"></img>

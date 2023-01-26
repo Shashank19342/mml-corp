@@ -1,0 +1,281 @@
+.nav {
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 170px;
+  height: 90px;
+  margin-left: 10px;
+}
+
+.links ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.links ul a{
+  text-decoration: none;
+}
+
+.links ul li {
+  padding: 9px 20px;
+  font-size: 15px;
+  margin: 0 15px;
+  cursor: pointer;
+  color: black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+.links ul li:hover {
+  border-bottom: 2px solid black;
+}
+
+.nav-btn button {
+  padding: 15px 30px;
+  margin-right: 20px;
+  background-color: rgb(181, 31, 211);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.nav-btn button:hover {
+  background-color: rgb(152, 17, 179);
+  box-shadow: 2px 2px 5px rgb(228, 117, 13);
+}
+
+.arrow-icon {
+  color: white;
+  margin-left: 5px;
+}
+
+.hambar {
+  display: none;
+  width: 50px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: #f0ddbb;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: 20;
+  transition: all 0.3s ease-in;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  z-index: 10;
+  display: none;
+}
+
+.closebar {
+  width: fit-content;
+  float: right;
+  margin-top: 38px;
+  margin-right: 40px;
+}
+
+.sidebar-content {
+  margin-top: 130px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 40px;
+}
+
+.sidebar-content ul {
+  list-style: none;
+}
+
+.sidebar-content ul li {
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
+.sidebar-content ul li:hover {
+  background-color: #e7cfa4;
+}
+
+.sidebar-content button {
+  padding: 15px 30px;
+  background-color: rgb(181, 31, 211);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .links {
+    display: none;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .hambar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .links ul li {
+    margin: 0 10px;
+  }
+  .logo img {
+    width: 75px;
+    height: 70px;
+    margin: 10px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-bottom: 50px;
+  max-width: 1150px;
+  margin: 100px auto 0 auto;
+}
+
+.footer-card {
+  max-width: 500px;
+  padding: 10px 40px;
+  border-left: 2px solid rgb(39, 27, 209);
+  font-weight: bold;
+}
+
+.footer-lable {
+  font-size: 20px;
+  margin: 5px auto;
+  color: rgb(39, 27, 209);
+}
+
+@media screen and (max-width: 850px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer-card {
+    margin: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer-card {
+    padding: 10px 20px;
+    margin: 20px 20px;
+  }
+}
+
+.svg1,
+.svg2 {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1200px;
+  height: 100%;
+  z-index: 1;
+	user-select: none;
+}
+
+.svg1 img,
+.svg2 img {
+  position: relative;
+  top: -60%;
+  right: -40%;
+}
+
+.svg1 img {
+  transform: rotate(50deg);
+  animation: spin-svg1 320s infinite linear;
+  top: -55%;
+  right: -38%;
+}
+
+.svg2 img {
+  animation: spin-svg2 360s infinite linear;
+}
+
+@keyframes spin-svg1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin-svg2 {
+  from {
+    transform: rotate(50deg);
+  }
+  to {
+    transform: rotate(409deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .svg1,
+  .svg2 {
+    width: 800px;
+    height: 700px;
+  }
+  .svg1 img {
+    top: -20%;
+    right: -35%;
+  }
+  .svg2 img {
+    top: -25%;
+    right: -37%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .svg1,
+  .svg2 {
+    width: 600px;
+    height: 550px;
+  }
+  .svg1 img {
+    right: -45%;
+  }
+  .svg2 img {
+    right: -48%;
+  }
+}

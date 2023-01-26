@@ -1,8 +1,6 @@
 import "./home.css";
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import svg1 from "../assets/blob.svg";
-import svg2 from "../assets/blob1.svg";
 import boppTape from "../assets/bopp-self-adhesive-tapes.png";
 import printedboppTape from "../assets/printed-bopp-tape.png";
 import maskingTape from "../assets/masking-tape.png";
@@ -24,19 +22,14 @@ import {
   faHandHoldingDollar,
   faClipboardCheck,
   faHandsPraying,
-  faBars,
-  faArrowRight,
-  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import hero_vid from "../assets/hero-video.mp4";
-import logo_with_name from "../assets/logo-with-name.png";
-import logo_without_name from "../assets/logo-without-name.png";
 
-const SERVICE_ID = "service_d9pdw89";
-const TEMPLATE_ID = "template_4zlnkvl";
-const PUBLIC_KEY = "user_2zDol7bSrAHjTXt85E49r";
+export const SERVICE_ID = "service_d9pdw89";
+export const TEMPLATE_ID = "template_4zlnkvl";
+export const PUBLIC_KEY = "user_2zDol7bSrAHjTXt85E49r";
 
-function Home() {
+function Home({className}) {
   const form = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -69,90 +62,9 @@ function Home() {
     }
   });
 
-  function handleProductSroll() {
-    document.getElementById("products").scrollIntoView();
-  }
-
-  function ContactUsScroll() {
-    document.getElementById("contact-form").scrollIntoView();
-  }
-
-  const openSidebar = () => {
-    document.getElementById("sidebar").style.left = "0%";
-    document.getElementById("overlay").style.display = "block";
-  };
-  const closeSidebar = () => {
-    document.getElementById("sidebar").style.left = "-100%";
-    document.getElementById("overlay").style.display = "none";
-  };
-
-  window.addEventListener("scroll", () => {
-    var scrollTop =
-      window.pageYOffset ||
-      (document.documentElement || document.body.parentNode || document.body)
-        .scrollTop;
-    if (scrollTop > 200) {
-      document.getElementById("navbar").style.backgroundColor = "#fff3dd";
-      document.getElementById("navbar").style.boxShadow = "2px 2px 6px #dbd4c5";
-    } else {
-      document.getElementById("navbar").style.backgroundColor = "rgba(0,0,0,0)";
-      document.getElementById("navbar").style.boxShadow = "none";
-    }
-  });
 
   return (
-    <div className="home">
-      <div className="nav" id="navbar">
-        <div className="navbar">
-          <div className="logo">
-            <img
-              src={
-                window.innerWidth <= 600 ? logo_without_name : logo_with_name
-              }
-              alt="MML Corporation"
-            ></img>
-          </div>
-          <div className="links">
-            <ul>
-              <li onClick={handleProductSroll}>Products</li>
-              <li onClick={ContactUsScroll}>Contact Us</li>
-            </ul>
-          </div>
-          <div className="nav-btn">
-            <button>
-              Explore{" "}
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                size="lg"
-                className="arrow-icon"
-              />
-            </button>
-          </div>
-          <div className="hambar" onClick={openSidebar}>
-            <FontAwesomeIcon icon={faBars} size="lg" />
-          </div>
-        </div>
-        <div className="sidebar" id="sidebar">
-          <div className="closebar" onClick={closeSidebar}>
-            <FontAwesomeIcon icon={faXmark} size="xl" />
-          </div>
-          <div className="sidebar-content">
-            <ul>
-              <li onClick={handleProductSroll}>Products</li>
-              <li onClick={ContactUsScroll}>Contact Us</li>
-            </ul>
-            <button>
-              Explore{" "}
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                size="lg"
-                className="arrow-icon"
-              />
-            </button>
-          </div>
-        </div>
-        <div className="bg-overlay" id="overlay" onClick={closeSidebar}></div>
-      </div>
+    <div className={className}>
       <div className="hero">
         <div className="hero-text">
           <p>
@@ -175,12 +87,6 @@ function Home() {
             <source src={hero_vid} type="video/mp4" />
           </video>
         </div>
-      </div>
-      <div className="svg1">
-        <img src={svg2} alt="" />
-      </div>
-      <div className="svg2">
-        <img src={svg1} alt="" />
       </div>
       <div className="vision">
         <h1>Vision</h1>
@@ -396,51 +302,7 @@ function Home() {
               and appropriate thichness aling with exceptional packaging.
             </p>
           </div>
-            <div className="contact-form">
-              <h2>Connect with Us</h2>
-              <form ref={form} onSubmit={handleSubmit}>
-                <label>Name </label>
-                <input type="text" placeholder="Name" name="user_name" />
-                <label>Email</label>
-                <input type="email" placeholder="Email" name="user_email" />
-                <label>Message</label>
-                <textarea
-                  rows="4"
-                  placeholder="Enter your message"
-                  name="message"
-                />
-                <button type="submit">Send</button>
-              </form>
-            </div>
           </div>
-      </div>
-      <div className="footer">
-        <div className="footer-card">
-          <div>
-            <p className="footer-lable">Reg. Off.</p>
-            <p>
-              303, Amber plaza 1, survey no. 51, Hissa no. 3, Near Petrol pump,
-              Badlapur(East), Maharashtra
-            </p>
-          </div>
-          <div>
-            <p className="footer-lable">Works</p>
-            <p>
-              Saraswati nagar colony Malahiya, po-Ramma Gharwaghat road, near
-              brick market, Varanasi, 2210
-            </p>
-          </div>
-        </div>
-        <div className="footer-card">
-          <div>
-            <p className="footer-lable">Mobile No.</p>
-            <p>+91 - 7387513536</p>
-          </div>
-          <div>
-            <p className="footer-lable">Email</p>
-            <p>mmlcorporation22@gmail.com</p>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -114,9 +114,14 @@
   list-style: none;
 }
 
+.sidebar-content ul a{
+  text-decoration: none;
+}
+
 .sidebar-content ul li {
   margin-top: 5px;
   padding-top: 20px;
+  color: black;
   padding-bottom: 10px;
   border-bottom: 2px solid black;
 }

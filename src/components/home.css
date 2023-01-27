@@ -33,29 +33,52 @@
   line-height: 25px;
 }
 
-.hero-vid {
+.heroImages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
   z-index: 5;
 }
 
-.hero-vid video {
-  margin: 0;
-  border-radius: 10px;
-  width: 400px;
+.heroImageColumn{
+  display: flex;
+  justify-content: center;
 }
 
-@media screen and (max-width: 1000px) {
+.heroImageColumn img{
+  margin: 0 10px;
+  border: 3px solid black;
+  padding: 3px;
+}
+
+.heroImages img{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 990px) {
+  .hero {
+    justify-content: space-around;
+  }
   .hero-text p {
     font-size: 40px;
     text-align: center;
   }
-  .hero-vid video {
-    width: 350px;
+  .heroImages{
+    margin-top: 50px;
+    gap: 5px;
+  }
+  .heroImages img{
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media screen and (max-width: 839px) {
-  .hero {
-    justify-content: space-around;
+  .heroImages{
+    margin-top: 10px;
   }
   .hero-text {
     margin-bottom: 100px;
@@ -73,12 +96,26 @@
   }
 }
 
-@media screen and (max-width: 420px) {
-  .hero-vid video {
-    width: 300px;
-  }
+@media screen and (max-width: 530px) {
   .hero-text p:nth-child(2) {
     width: fit-content;
+  }
+  .heroImageColumn img{
+    margin: 0 5px;
+  }
+  .heroImages img{
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .heroImageColumn img{
+    margin: 0 2px;
+  }
+  .heroImages img{
+    width: 90px;
+    height: 90px;
   }
 }
 

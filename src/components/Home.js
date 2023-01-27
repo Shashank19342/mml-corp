@@ -1,6 +1,5 @@
 import "./home.css";
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import boppTape from "../assets/bopp-self-adhesive-tapes.png";
 import printedboppTape from "../assets/printed-bopp-tape.png";
 import maskingTape from "../assets/masking-tape.png";
@@ -23,25 +22,12 @@ import {
   faClipboardCheck,
   faHandsPraying,
 } from "@fortawesome/free-solid-svg-icons";
-import hero_vid from "../assets/hero-video.mp4";
 
 export const SERVICE_ID = "service_d9pdw89";
 export const TEMPLATE_ID = "template_4zlnkvl";
 export const PUBLIC_KEY = "user_2zDol7bSrAHjTXt85E49r";
 
 function Home({className}) {
-  const form = useRef();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
-      (result) => {
-        alert("Success", result.text);
-      },
-      (error) => {
-        alert("Failed", error.text);
-      }
-    );
-  };
   const [fontSize1, setFontSize1] = useState(60);
   const [fontSize2, setFontSize2] = useState(80);
 
@@ -82,10 +68,16 @@ function Home({className}) {
             other kindes of tapes.
           </p>
         </div>
-        <div className="hero-vid">
-          <video loop autoPlay muted>
-            <source src={hero_vid} type="video/mp4" />
-          </video>
+        <div className="heroImages">
+          <div className="heroImageColumn">
+            <img src={printedboppTape} alt="Printed bopp tape"/>
+            <img src={doubleSidedFoamTape} alt="Double sided foam tape"/>
+            <img src={electricInsulationTape} alt="Electric Insulation Tape"/>
+          </div>
+          <div className="heroImageColumn">
+            <img src={floorMarkingTape} alt="Floor marking Tape"/>
+            <img src={kraftPaperTape} alt="Kraft Paper Tape"/>
+          </div>
         </div>
       </div>
       <div className="vision">

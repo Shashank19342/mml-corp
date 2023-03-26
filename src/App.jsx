@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Aboutus from "./components/Aboutus";
+import Products from "./components/Products";
 import svg1 from "./assets/blob.svg";
 import svg2 from "./assets/blob1.svg";
 import logo_with_name from "./assets/logo-with-name.png";
@@ -97,11 +98,14 @@ function App() {
           </div>
           <div className="bg-overlay" id="overlay" onClick={closeSidebar}></div>
         </div>
-        <Routes>
-          <Route exact path='mml-corp/' element={<Home />}></Route> 
-          <Route exact path='mml-corp/contact' element={<Contact />}></Route>
-          <Route exact path='mml-corp/aboutus' element={<Aboutus />}></Route>
-        </Routes>
+        <div className="componentContainer">
+          <Routes basename={process.env.PUBLIC_URL}>
+            <Route exact path='mml-corp/' element={<Home />}></Route> 
+            <Route exact path='mml-corp/contact' element={<Contact />}></Route>
+            <Route exact path='mml-corp/aboutus' element={<Aboutus />}></Route>
+            <Route exact path='mml-corp/products' element={<Products />}></Route>
+          </Routes>
+        </div>
         <div className="footer">
           <div className="footer-card">
             <div>

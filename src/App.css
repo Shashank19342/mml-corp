@@ -1,8 +1,14 @@
+.componentContainer{
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
 .nav {
   width: 100vw;
   position: fixed;
   z-index: 10;
   transition: all 0.3s ease;
+  top: 0;
 }
 
 .navbar {

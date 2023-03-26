@@ -6,7 +6,7 @@ const Aboutus = () => {
   return (
     <div className="aboutus">
       <div className="mission">
-        <h3>Mission</h3>
+        <h2>Mission</h2>
         <p>
           Trus, Integrity, Commitment and Value are the key elements that drive
           the business dealings with our customers.

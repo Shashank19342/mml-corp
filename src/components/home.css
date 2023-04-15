@@ -98,8 +98,8 @@
     margin: 0 5px;
   }
   .heroImages img{
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
   }
 }
 
@@ -108,19 +108,22 @@
     margin: 0 2px;
   }
   .heroImages img{
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
+}
+
+.visionWrapper{
+  background-color: rgb(248, 117, 55);
+  clip-path: polygon(-800% 100%, 100% 0, 100% 88%, 0% 100%);
+  margin-top: 50px;
+  padding: 50px 0;
 }
 
 .vision {
   text-align: center;
   max-width: 1150px;
   margin: 50px auto 50px auto;
-}
-
-.vision h1 {
-  color: rgb(39, 27, 209);
 }
 
 .vision p {
@@ -137,19 +140,79 @@
 }
 
 .goals-card {
-  max-width: 350px;
+  max-width: 320px;
   background-color: rgba(255, 255, 255, 0.733);
   border-radius: 10px;
   margin: 15px;
-  padding: 15px;
+  padding: 15px 10px;
+  box-shadow: 2px 2px 4px rgb(176, 81, 8);
 }
 
 .goals-card h3 {
-  color: rgb(39, 27, 209);
   margin-bottom: 40px;
 }
 
 .vision-icons {
   font-size: 55px;
   margin-bottom: 40px;
+  color: rgb(248, 117, 55);
+}
+
+@media screen and (max-width: 800px){
+  .visionWrapper{
+    margin-top: 20px;
+    clip-path: polygon(-2000% 100%, 100% 0, 100% 95%, 0% 100%);
+  }
+}
+
+.topProds{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.swiperContainer{
+  padding: 50px 50px;
+}
+
+.swiperCard{
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px rgb(115, 115, 115);
+  margin: 10px 0px 50px 0;
+  height: 420px;
+}
+
+.tapeImg img{
+  width: 200px;
+  height: 200px;
+}
+
+.tapeInfo{
+  margin-top: 20px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.swiperCard button{
+  position: absolute;
+  border: 1px solid black;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rgb(40, 178, 224);
+  transition: all 0.3s ease;
+}
+
+.swiperCard button:hover{
+  box-shadow: 2px 2px 2px rgb(76, 76, 76);
+}
+
+@media screen and (max-width: 900px){
+  .swiperContainer{
+    padding: 50px 10px;
+  }
 }

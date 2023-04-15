@@ -1,27 +1,27 @@
 import "./home.css";
 import React, { useState } from "react";
-import boppTape from "../assets/bopp-self-adhesive-tapes.png";
 import printedboppTape from "../assets/printed-bopp-tape.png";
-import maskingTape from "../assets/masking-tape.png";
-import doubleSideTissueTape from "../assets/double-side-tissue-tape.png";
 import doubleSidedFoamTape from "../assets/double-side-foam-tape.png";
-import doubleSidePolyesterTape from "../assets/double-side-polyester-tape.png";
 import electricInsulationTape from "../assets/electrical-insulation-tape.png";
-import ductTape from "../assets/duct-tape.png";
 import floorMarkingTape from "../assets/floor-marking-tape.png";
 import kraftPaperTape from "../assets/kraft-paper-tape.png";
-import aluminimumFoilTape from "../assets/aluminimum-foil-tape.png";
-import crosslinkGasketFoamTape from "../assets/crosslink-gasket-foam-tape.png";
-import hdpeAdhesiveTape from "../assets/hdpe-adhesive-tape.png";
-import dsFoamTape from "../assets/ds-foam-tape.png";
-import stationaryTape from "../assets/stationary-tape.png";
-import specialityAdhesiveTapes from "../assets/speciality-adhesive-tape.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHandHoldingDollar,
   faClipboardCheck,
   faHandsPraying,
 } from "@fortawesome/free-solid-svg-icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Importing Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import swiper required modules
+import { Pagination, Navigation } from "swiper";
+
+import { productsDetails } from "./productsdetails"
 
 export const SERVICE_ID = "service_d9pdw89";
 export const TEMPLATE_ID = "template_4zlnkvl";
@@ -30,18 +30,28 @@ export const PUBLIC_KEY = "user_2zDol7bSrAHjTXt85E49r";
 function Home() {
   const [fontSize1, setFontSize1] = useState(60);
   const [fontSize2, setFontSize2] = useState(80);
+  const [spaceBwtslides, setSpaceBwtSlides] = useState(50);
+  const [slidesPerView, setSlidesPerView] = useState(3);
 
   window.addEventListener("resize", () => {
     if(window.innerWidth <= 400){
       setFontSize1(38);
       setFontSize2(55);
+    } else if (window.innerWidth <= 500) {
+      setSlidesPerView(1);
     }
     else if (window.innerWidth <= 700) {
       setFontSize1(45);
       setFontSize2(65);
+      setSlidesPerView(2);
+    } else if (window.innerWidth <= 800){
+      setSpaceBwtSlides(20);
+      setSlidesPerView(2);
     } else if (window.innerWidth <= 1000) {
       setFontSize1(55);
       setFontSize2(75);
+      setSpaceBwtSlides(50);
+      setSlidesPerView(3);
     } else {
       setFontSize1(60);
       setFontSize2(80);
@@ -80,43 +90,81 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="vision">
-        <h1>Vision</h1>
-        <p>
-          MML Corporation was founded with the commitment to offer an
-          ever-improving standard of custom packaging excellence. To accomplish
-          this goal, we have followed three guiding standards.
-        </p>
-        <div className="goals">
-          <div className="goals-card">
-            <h3>Value in Addition to Price</h3>
-            <FontAwesomeIcon
-              icon={faHandHoldingDollar}
-              className="vision-icons"
-            />
-            <p>
-              Offer a great product at great price. Our goal is to consistently
-              offer the highest packaging at the lowest prices in the
-              industries.
-            </p>
+      <div className="visionWrapper">
+        <div className="vision">
+          <h1>Vision</h1>
+          <p>
+            MML Corporation was founded with the commitment to offer an
+            ever-improving standard of custom packaging excellence. To accomplish
+            this goal, we have followed three guiding standards.
+          </p>
+          <div className="goals">
+            <div className="goals-card">
+              <h3>Value in Addition to Price</h3>
+              <FontAwesomeIcon
+                icon={faHandHoldingDollar}
+                className="vision-icons"
+              />
+              <p>
+                Offer a great product at great price. Our goal is to consistently
+                offer the highest packaging at the lowest prices in the
+                industries.
+              </p>
+            </div>
+            <div className="goals-card">
+              <h3>Selection Second to None</h3>
+              <FontAwesomeIcon icon={faClipboardCheck} className="vision-icons" />
+              <p>
+                Offer an extensive array of sizes, lenghts, color and printing
+                options with an equally impressive pricing.
+              </p>
+            </div>
+            <div className="goals-card">
+              <h3>Respect for the Customer</h3>
+              <FontAwesomeIcon icon={faHandsPraying} className="vision-icons" />
+              <p>
+                Simply stated, we will treat you as we ourselves would like to be
+                treated. Our passion for outstanding customer service means we are
+                not staisfied until you are satisfied.
+              </p>
+            </div>
           </div>
-          <div className="goals-card">
-            <h3>A Selection that is Second to None</h3>
-            <FontAwesomeIcon icon={faClipboardCheck} className="vision-icons" />
-            <p>
-              Offer an extensive array of sizes, lenghts, color and printing
-              options with an equally impressive pricing.
-            </p>
-          </div>
-          <div className="goals-card">
-            <h3>Genuine Respect for the Customer</h3>
-            <FontAwesomeIcon icon={faHandsPraying} className="vision-icons" />
-            <p>
-              Simply stated, we will treat you as we ourselves would like to be
-              treated. Our passion for outstanding customer service means we are
-              not staisfied until you are satisfied.
-            </p>
-          </div>
+        </div>
+      </div>
+      <div className="topProds">
+        <h1>Top Products</h1>
+        <div className="swiperContainer">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            slidesPerView={slidesPerView}
+            spaceBetween={spaceBwtslides}
+            pagination={{
+              clickable: true,
+            }}
+            navigation
+            className="mySwiper"
+          >
+            {
+              productsDetails.map((prod,i) => {
+                return <SwiperSlide key={i}>
+                  <div className="swiperCard">
+                    <div className='tapeImg'>
+                      <img src={prod.imgLink} alt={prod.name} />
+                      <h3>{prod.name}</h3>
+                    </div>
+                    <div className='tapeInfo'>
+                      {prod.productType?<p><b>Product Type:</b> {prod.productType}</p>:""}
+                      {prod.color?<p><b>Color:</b> {prod.color}</p>:""}
+                      {prod.length?<p><b>Length:</b> {prod.length}</p>:""}
+                      {prod.width?<p><b>Width:</b> {prod.width}</p>:""}
+                      {prod.productType?<p><b>Product Type:</b> {prod.productType}</p>:""}
+                    </div>
+                    <button>Details</button>
+                  </div>
+                </SwiperSlide>
+              })
+            }
+          </Swiper>
         </div>
       </div>
     </div>

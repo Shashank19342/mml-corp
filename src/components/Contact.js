@@ -2,6 +2,7 @@ import "./Contact.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "./Home";
+import allTapes from "../assets/allTapes.jpg";
 
 const Contact = () => {
   const form = useRef();
@@ -22,20 +23,26 @@ const Contact = () => {
         <h2>MML Corporation Private Limited</h2>
         <h4>Drop a mail or connect with us on Social Media</h4>
       </div>
-      <div className="contact-form">
-        <h2>E-Mail Us</h2>
-        <form ref={form} onSubmit={handleSubmit}>
-          <label>Name </label>
-          <input type="text" placeholder="Name" name="user_name" />
-          <label>Email</label>
-          <input type="email" placeholder="Email" name="user_email" />
-          <label>Mobile Number</label>
-          <input type="text" placeholder="Mobile NUmber" name="user_phone" />
-          <label>Message</label>
-          <textarea rows="4" placeholder="Enter your message" name="message" />
-          <button type="submit">Send</button>
-        </form>
+      <div className="contactContainer">
+        <div className="contactTapesTmg">
+          <img src={allTapes} alt="Tapes" />
+        </div>
+        <div className="contact-form">
+          <h2>E-Mail Us</h2>
+          <form ref={form} onSubmit={handleSubmit}>
+            <label>Name </label>
+            <input type="text" placeholder="Name" name="user_name" />
+            <label>Email</label>
+            <input type="email" placeholder="Email" name="user_email" />
+            <label>Mobile Number</label>
+            <input type="text" placeholder="Mobile NUmber" name="user_phone" />
+            <label>Message</label>
+            <textarea rows="4" placeholder="Enter your message" name="message" />
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
+      
     </div>
   );
 };

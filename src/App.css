@@ -187,14 +187,14 @@
 .footer-card {
   max-width: 500px;
   padding: 10px 40px;
-  border-left: 2px solid rgb(39, 27, 209);
+  border-left: 2px solid rgb(57.676, 171.447, 255);
   font-weight: bold;
 }
 
 .footer-lable {
   font-size: 20px;
   margin: 5px auto;
-  color: rgb(39, 27, 209);
+  color: rgb(57.676, 171.447, 255);
 }
 
 @media screen and (max-width: 850px) {

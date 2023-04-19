@@ -26,7 +26,7 @@ function App() {
       window.pageYOffset ||
       (document.documentElement || document.body.parentNode || document.body)
         .scrollTop;
-    if (scrollTop > 100) {
+    if (scrollTop > 20) {
       document.getElementById("navbar").style.backgroundColor = "#fff3dd";
       document.getElementById("navbar").style.boxShadow = "2px 2px 6px #dbd4c5";
     } else {

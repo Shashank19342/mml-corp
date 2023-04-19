@@ -17,21 +17,36 @@
   margin-top: 10px;
 }
 
+.contactContainer{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgb(113, 113, 113);
+}
+
+.contactTapesTmg{
+  display: flex;
+  align-items: center;
+}
+
+.contactTapesTmg img{
+  width: 400px;
+  height: 370px;
+}
+
 .contact-form {
   padding: 30px 50px;
-  background-color: #ffa812;
+  background-color: rgb(248, 117, 55);
   border-radius: 10px;
   width: fit-content;
   margin: 0 auto;
-  z-index: 1;
-  box-shadow: 2px 2px 3px #cf8a12;
 }
 
 .contact-form h2 {
-  color: rgb(39, 27, 209);
   padding-bottom: 3px;
   margin-bottom: 15px;
-  border-bottom: 2px solid rgb(39, 27, 209);
+  border-bottom: 2px solid black;
 }
 
 form {
@@ -40,7 +55,6 @@ form {
 }
 
 form label {
-  color: rgb(39, 27, 209);
   margin-bottom: 5px;
 }
 
@@ -59,8 +73,7 @@ form button {
   padding: 7px 35px;
   border-radius: 30px;
   margin: 20px auto 0 auto;
-  border: 2px solid rgb(39, 27, 209);
-  color: rgb(39, 27, 209);
+  border: 2px solid black;
   font-size: 15px;
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
@@ -68,7 +81,22 @@ form button {
 }
 
 form button:hover {
-  background-color: #2db1fd;
   color: white;
-  box-shadow: 2px 2px 5px rgb(88, 88, 88);
+  box-shadow: 2px 2px 4px rgb(194, 68, 10);
+}
+
+@media screen and (max-width: 800px) {
+  .contactTapesTmg{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  form input, form textarea{
+    width: 270px;
+  }
 }

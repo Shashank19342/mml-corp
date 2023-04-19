@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/mml-corp/static/css/main.3e00fd97.css",
-    "main.js": "/mml-corp/static/js/main.0b93f40e.js",
+    "main.css": "/mml-corp/static/css/main.4350f8d7.css",
+    "main.js": "/mml-corp/static/js/main.b21916bb.js",
     "static/js/787.d3befce1.chunk.js": "/mml-corp/static/js/787.d3befce1.chunk.js",
     "static/media/hero-video.mp4": "/mml-corp/static/media/hero-video.a5208d61c1ffdc95e1a5.mp4",
+    "static/media/allTapes.jpg": "/mml-corp/static/media/allTapes.7f4c2e670e10a9a6d45a.jpg",
     "static/media/logo-without-name.png": "/mml-corp/static/media/logo-without-name.d9ca3551bc3e1d0cf52b.png",
     "static/media/logo-with-name.png": "/mml-corp/static/media/logo-with-name.5d34603c9a7973385982.png",
     "static/media/double-side-foam-tape.png": "/mml-corp/static/media/double-side-foam-tape.1078f6803f6c02b86d01.png",
@@ -13,12 +14,12 @@
     "static/media/blob1.svg": "/mml-corp/static/media/blob1.ae4b2ee0d4bed82e6fce259146b872b0.svg",
     "static/media/blob.svg": "/mml-corp/static/media/blob.40dcdf016ded95f449d270781b0a9516.svg",
     "index.html": "/mml-corp/index.html",
-    "main.3e00fd97.css.map": "/mml-corp/static/css/main.3e00fd97.css.map",
-    "main.0b93f40e.js.map": "/mml-corp/static/js/main.0b93f40e.js.map",
+    "main.4350f8d7.css.map": "/mml-corp/static/css/main.4350f8d7.css.map",
+    "main.b21916bb.js.map": "/mml-corp/static/js/main.b21916bb.js.map",
     "787.d3befce1.chunk.js.map": "/mml-corp/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e00fd97.css",
-    "static/js/main.0b93f40e.js"
+    "static/css/main.4350f8d7.css",
+    "static/js/main.b21916bb.js"
   ]
 }

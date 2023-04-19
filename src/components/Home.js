@@ -33,11 +33,14 @@ function Home() {
   const [spaceBwtslides, setSpaceBwtSlides] = useState(50);
   const [slidesPerView, setSlidesPerView] = useState(3);
 
-  window.addEventListener("resize", () => {
+  window.addEventListener("load", () => {
     if(window.innerWidth <= 400){
       setFontSize1(38);
       setFontSize2(55);
+      setSlidesPerView(1);
     } else if (window.innerWidth <= 500) {
+      setFontSize1(45);
+      setFontSize2(65);
       setSlidesPerView(1);
     }
     else if (window.innerWidth <= 700) {
@@ -45,6 +48,8 @@ function Home() {
       setFontSize2(65);
       setSlidesPerView(2);
     } else if (window.innerWidth <= 800){
+      setFontSize1(55);
+      setFontSize2(75);
       setSpaceBwtSlides(20);
       setSlidesPerView(2);
     } else if (window.innerWidth <= 1000) {

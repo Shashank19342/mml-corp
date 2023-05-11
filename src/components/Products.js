@@ -6,10 +6,10 @@ const Products = () => {
   return (
     <div className="products">
       <div className="filterBox">
-        <h2>Products</h2>
-        <div>
+        <h2>All Products</h2>
+        {/* <div>
           <button>Filter</button>
-        </div>
+        </div> */}
       </div>
       <div className="allTapes">
         {productsDetails.map((tapes, index) => {

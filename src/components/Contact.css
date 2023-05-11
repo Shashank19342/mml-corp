@@ -99,4 +99,16 @@ form button:hover {
   form input, form textarea{
     width: 270px;
   }
+
+  .contactFormPage{
+    height: fit-content;
+    margin-top: 120px;
+  }
+
+  .contactFormHeading h2{
+    font-size: 19px;
+  }
+  .contactFormHeading h4{
+    font-size: 15px;
+  }
 }

@@ -1,5 +1,5 @@
 import "./home.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import printedboppTape from "../assets/printed-bopp-tape.png";
 import doubleSidedFoamTape from "../assets/double-side-foam-tape.png";
 import electricInsulationTape from "../assets/electrical-insulation-tape.png";
@@ -33,17 +33,16 @@ function Home() {
   const [spaceBwtslides, setSpaceBwtSlides] = useState(50);
   const [slidesPerView, setSlidesPerView] = useState(3);
 
-  window.addEventListener("load", () => {
+  useEffect(()=>{
     if(window.innerWidth <= 400){
-      setFontSize1(38);
-      setFontSize2(55);
+      setFontSize1(35);
+      setFontSize2(50);
       setSlidesPerView(1);
     } else if (window.innerWidth <= 500) {
       setFontSize1(45);
       setFontSize2(65);
       setSlidesPerView(1);
-    }
-    else if (window.innerWidth <= 700) {
+    } else if (window.innerWidth <= 700) {
       setFontSize1(45);
       setFontSize2(65);
       setSlidesPerView(2);
@@ -61,7 +60,7 @@ function Home() {
       setFontSize1(60);
       setFontSize2(80);
     }
-  });
+  },[])
 
 
   return (

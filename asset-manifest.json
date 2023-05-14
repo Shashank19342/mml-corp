@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mml-corp/static/css/main.c35f44eb.css",
-    "main.js": "/mml-corp/static/js/main.346aec23.js",
+    "main.css": "/mml-corp/static/css/main.fb584a48.css",
+    "main.js": "/mml-corp/static/js/main.1735056a.js",
     "static/js/787.d3befce1.chunk.js": "/mml-corp/static/js/787.d3befce1.chunk.js",
     "static/media/hero-video.mp4": "/mml-corp/static/media/hero-video.a5208d61c1ffdc95e1a5.mp4",
     "static/media/allTapes.jpg": "/mml-corp/static/media/allTapes.7f4c2e670e10a9a6d45a.jpg",
@@ -14,12 +14,12 @@
     "static/media/blob1.svg": "/mml-corp/static/media/blob1.ae4b2ee0d4bed82e6fce259146b872b0.svg",
     "static/media/blob.svg": "/mml-corp/static/media/blob.40dcdf016ded95f449d270781b0a9516.svg",
     "index.html": "/mml-corp/index.html",
-    "main.c35f44eb.css.map": "/mml-corp/static/css/main.c35f44eb.css.map",
-    "main.346aec23.js.map": "/mml-corp/static/js/main.346aec23.js.map",
+    "main.fb584a48.css.map": "/mml-corp/static/css/main.fb584a48.css.map",
+    "main.1735056a.js.map": "/mml-corp/static/js/main.1735056a.js.map",
     "787.d3befce1.chunk.js.map": "/mml-corp/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c35f44eb.css",
-    "static/js/main.346aec23.js"
+    "static/css/main.fb584a48.css",
+    "static/js/main.1735056a.js"
   ]
 }

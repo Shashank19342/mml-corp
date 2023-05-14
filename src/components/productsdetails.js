@@ -1,5 +1,6 @@
 export const productsDetails = [
   {
+    productId: 1,
     name: "BOPP White Tapes",
     productType: "Packing Tapes",
     material: "BOPP",
@@ -9,6 +10,7 @@ export const productsDetails = [
     imgLink: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/31pzRyrYD4L.jpg",
   },
   {
+    productId: 2,
     name: "BOPP Customised Tapes",
     adhesiveSide: "Single Side",
     length: "100 Meter (m)",
@@ -18,6 +20,7 @@ export const productsDetails = [
       "Our printed tapes provides high esthetics and visual branding required for the extra mileage you can take through packing. Our BOPP carton sealing tape with water-based acrylic adhesive has excellent adhesion, superior impact resistance, excellent shelf life, and UV resistance. We use advanced coating technology, pneumatically controlled drying system, rotogravure printing, and slitting equipment to ensure excellent quality of the tapes. Our products are known for their pressure-sensitive precision, excellent finishing, adhesiveness, and appropriate thickness along with exceptional packaging. we can also customize printed and other tapes on request.",
   },
   {
+    productId: 3,
     name: "BOPP Super Clear Tape",
     productType: "Packing Tape",
     material: "BOPP",
@@ -30,6 +33,7 @@ export const productsDetails = [
       "The commonly used adhesive packing tapes that are used in sealing medium to heavy-duty carton sealing, shipping, inventory management and in logistics industries are actually BOPP tapes.",
   },
   {
+    productId: 4,
     name: "BOPP Color Tapes",
     productType: "Packing Tapes",
     material: "BOPP",
@@ -47,6 +51,7 @@ export const productsDetails = [
       "We have carved a niche in this domain, as leading manufacturer and supplier of the finest quality BOPP Color Tapes. Owing to its effective stickiness and sturdy design, provided tapes are highly cherished among our clients. With the help of sophisticated machines, the offered tape is manufactured using supreme grade raw materials under the observation of deft professionals. In addition to this, our esteemed patrons can easily avail the provided BOPP Color Tapes at reasonable rates from us.",
   },
   {
+    productId: 5,
     name: "BOPP Packing Tapes",
     productType: "Packing Tape",
     material: "BOPP",
@@ -58,6 +63,7 @@ export const productsDetails = [
       "Our printed tapes provides high esthetics and visual branding required for the extra mileage you can take through packing. Our BOPP carton sealing tape with water-based acrylic adhesive has excellent adhesion, superior impact resistance, excellent shelf life, and UV resistance. We use advanced coating technology, pneumatically controlled drying system, rotogravure printing, and slitting equipment to ensure excellent quality of the tapes. Our products are known for their pressure-sensitive precision, excellent finishing, adhesiveness, and appropriate thickness along with exceptional packaging. we can also customize printed and other tapes on request.",
   },
   {
+    productId: 6,
     name: "BOPP Brown Tapes",
     productType: "Sealing Tapes",
     material: "BOPP",
@@ -68,6 +74,7 @@ export const productsDetails = [
     supplyAbility: "10 Box per day",
   },
   {
+    productId: 7,
     name: "Carpainter Masking Tape",
     adhesiveSide: "Single Side",
     shelfLife: "2-3 years",
@@ -80,6 +87,7 @@ export const productsDetails = [
       "Masking tape, also known as painter's tape, is a type of pressure-sensitive tape made of a thin and easy-to-tear paper, and an easily released pressure-sensitive adhesive. It is available in a variety of widths. It is used mainly in painting, to mask off areas that should not be painted.",
   },
   {
+    productId: 8,
     name: "Painter Masking Tape",
     adhesiveSide: "Single Side",
     length: "20 Meter (m)",

@@ -83,7 +83,7 @@
   width: 300px;
   height: 100%;
   top: 0;
-  left: -100%;
+  left: -120%;
   z-index: 20;
   transition: all 0.3s ease-in;
 }

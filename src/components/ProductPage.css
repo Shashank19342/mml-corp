@@ -1,0 +1,53 @@
+.productDetails {
+  position: relative;
+  z-index: 5;
+  margin-top: 150px;
+}
+
+.productCard {
+  margin: 0 20px;
+}
+
+.productCard h2 {
+  margin-bottom: 20px;
+}
+
+.productInfoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.productImg {
+  text-align: center;
+}
+
+.productImg img {
+  width: 200px;
+  height: 200px;
+}
+
+.productInfo p {
+  margin-bottom: 10px;
+  max-width: 800px;
+}
+
+.productInfo p b {
+  margin-right: 10px;
+}
+
+.features {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .productCard h2 {
+    text-align: center;
+  }
+
+  .productInfoContainer {
+    flex-direction: column;
+  }
+}

@@ -46,7 +46,7 @@
     text-align: left;
 }
 
-.tape button{
+.tapeBtn{
     position: absolute;
     border: 1px solid black;
     bottom: 10px;
@@ -59,15 +59,31 @@
     transition: all 0.3s ease;
   }
   
-.tape button:hover{
+.tapeBtn:hover{
     box-shadow: 2px 2px 2px rgb(76, 76, 76);
 }
 
 @media screen and (max-width: 450px) {
+    .products{
+        margin-top: 100px;
+    }
+
+    .tape{
+        padding: 0 20px;
+    }
+
     .allTapes{
         padding: 0;
+        margin-top: 20px;
+        gap: 0px;
     }
     .filterBox{
         padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .tape{
+        padding: 0 10px;
     }
 }

@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Aboutus from "./components/Aboutus";
+import ProductPage from "./components/ProductPage";
 import Products from "./components/Products";
 import svg1 from "./assets/blob.svg";
 import svg2 from "./assets/blob1.svg";
@@ -16,8 +17,9 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
+    Link,
 } from 'react-router-dom';
+
 
 function App() {
   
@@ -40,7 +42,7 @@ function App() {
     document.getElementById("overlay").style.display = "block";
   };
   const closeSidebar = () => {
-    document.getElementById("sidebar").style.left = "-100%";
+    document.getElementById("sidebar").style.left = "-120%";
     document.getElementById("overlay").style.display = "none";
   };
 
@@ -55,8 +57,6 @@ function App() {
   function handleHomeClick() {
     closeSidebar();
   }
-
-
   
   return (
     <Router>
@@ -73,10 +73,10 @@ function App() {
             </div>
             <div className="links">
               <ul>
-                <Link to="mml-corp/"><li onClick={handleHomeClick}>Home</li></Link>
-                <Link to="mml-corp/products"><li onClick={handleProductClick}>Products</li></Link>
-                <Link to="mml-corp/contact"><li onClick={ContactUsClick}>Contact Us</li></Link>
-                <Link to="mml-corp/aboutus"><li onClick={handleHomeClick}>About Us</li></Link>
+                <Link to="mml-corp"><li onClick={handleHomeClick}>Home</li></Link>
+                <Link to="products"><li onClick={handleProductClick}>Products</li></Link>
+                <Link to="contact"><li onClick={ContactUsClick}>Contact Us</li></Link>
+                <Link to="aboutus"><li onClick={handleHomeClick}>About Us</li></Link>
               </ul>
             </div>
             <div className="hambar" onClick={openSidebar}>
@@ -89,10 +89,10 @@ function App() {
             </div>
             <div className="sidebar-content">
               <ul>
-                <Link to="mml-corp/"><li onClick={handleHomeClick}>Home</li></Link>
-                <Link to="mml-corp/products"><li onClick={handleProductClick}>Products</li></Link>
-                <Link to="mml-corp/contact"><li onClick={ContactUsClick}>Contact Us</li></Link>
-                <Link to="mml-corp/aboutus"><li onClick={handleHomeClick}>About Us</li></Link>
+                <Link to="mml-corp"><li onClick={handleHomeClick}>Home</li></Link>
+                <Link to="products"><li onClick={handleProductClick}>Products</li></Link>
+                <Link to="contact"><li onClick={ContactUsClick}>Contact Us</li></Link>
+                <Link to="aboutus"><li onClick={handleHomeClick}>About Us</li></Link>
               </ul>
             </div>
           </div>
@@ -100,10 +100,11 @@ function App() {
         </div>
         <div className="componentContainer">
           <Routes basename={process.env.PUBLIC_URL}>
-            <Route exact path='mml-corp/' element={<Home />}></Route> 
-            <Route exact path='mml-corp/contact' element={<Contact />}></Route>
-            <Route exact path='mml-corp/aboutus' element={<Aboutus />}></Route>
-            <Route exact path='mml-corp/products' element={<Products />}></Route>
+            <Route exact path='mml-corp' element={<Home />}></Route> 
+            <Route exact path='contact' element={<Contact />}></Route>
+            <Route exact path='aboutus' element={<Aboutus />}></Route>
+            <Route exact path='products' element={<Products />}></Route>
+            <Route path='products/:productId' element={<ProductPage />}></Route>
           </Routes>
         </div>
         <div className="footer">

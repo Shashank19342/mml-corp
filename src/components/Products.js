@@ -1,6 +1,9 @@
 import React from "react";
 import "./Products.css";
 import { productsDetails } from "./productsdetails";
+import {
+  Link
+} from 'react-router-dom';
 
 const Products = () => {
   return (
@@ -56,7 +59,7 @@ const Products = () => {
                   ""
                 )}
               </div>
-              <button>Details</button>
+              <Link to={`${tapes.productId}`} className="tapeBtn">Details</Link>
             </div>
           );
         })}
